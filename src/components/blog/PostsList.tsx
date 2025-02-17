@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useBlog } from "../../context/BlogContext";
 import PostCard from "./PostCard";
 import LoadingIndicator from "../shared/LoadingIndicator";
+import CommentModal from "./CommentModal";
 
 export default function PostsList() {
   const { state, fetchPosts } = useBlog();
@@ -30,6 +31,7 @@ export default function PostsList() {
           }
         </div>
       </div>
+      <CommentModal />
     </>
   )
 }
