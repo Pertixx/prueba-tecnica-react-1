@@ -1,50 +1,86 @@
-# React + TypeScript + Vite
+# Aplicación de Blog con DummyAPI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## ⚡ Características
+- Ver publicaciones con imagen principal, etiquetas e información del publicador
+- Listado de comentarios para cada publicación
+- Sistema de filtrado por etiquetas
+- Rutas protegidas con autenticación de Google
+- Listado de usuarios con fotos de perfil
+- Persistencia de datos en tiempo real con Firebase
 
-Currently, two official plugins are available:
+## 🛠️ Tecnologías Utilizadas
+- React + Vite
+- React Router DOM
+- Firebase (Autenticación y Firestore)
+- TailwindCSS
+- DummyAPI
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📋 Requisitos
+- Node.js 16+
+- npm o yarn
 
-## Expanding the ESLint configuration
+## 🚀 Instalación
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+1. Clona el repositorio
+```bash
+git clone https://github.com/Pertixx/prueba-tecnica-react-1.git
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+2. Instala las dependencias
+```bash
+cd prueba-tecnica-react-1
+npm install
 ```
+
+3. Crea un archivo `.env` en el directorio raíz con las siguientes variables:
+```env
+VITE_FIREBASE_API_KEY=tu_api_key
+VITE_FIREBASE_AUTH_DOMAIN=tu_auth_domain
+VITE_FIREBASE_PROJECT_ID=tu_project_id
+VITE_FIREBASE_STORAGE_BUCKET=tu_storage_bucket
+VITE_FIREBASE_MESSAGING_SENDER_ID=tu_sender_id
+VITE_FIREBASE_APP_ID=tu_app_id
+VITE_DUMMY_API_KEY=tu_dummy_api_key
+```
+
+4. Ejecuta el servidor de desarrollo
+```bash
+npm run dev
+```
+
+## 📱 Estructura del Proyecto
+```
+src/
+├── components/
+│   ├── blog/
+│   ├── shared/
+│   └── auth/
+├── pages/
+├── services/
+├── context/
+└── utils/
+...
+```
+
+## 🚀 Despliegue
+Este proyecto se despliega usando GitHub Pages. Para desplegar:
+
+1. Ejecuta el comando de construcción:
+```bash
+npm run build
+```
+
+2. Despliega en GitHub Pages:
+```bash
+npm run deploy
+```
+
+## ⏱️ Cronograma de Desarrollo
+- Hora 1: Configuración inicial y estructura del proyecto
+- Hora 2: Implementación de características principales
+- Hora 3: Autenticación y características de usuario
+- Hora 4: Toques finales y despliegue
+
+## 📝 Notas
+- El proyecto utiliza Firebase para la persistencia de datos en tiempo real
+- La autenticación se maneja a través de Google Sign In
