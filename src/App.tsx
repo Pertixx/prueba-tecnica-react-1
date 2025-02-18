@@ -5,7 +5,7 @@ import { AuthProvider } from './context/AuthContext'
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='/prueba-tecnica-react-1/'>
       <AuthProvider>
         <BlogProvider>
           <Routes>
